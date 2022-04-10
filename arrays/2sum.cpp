@@ -3,7 +3,7 @@
     https://leetcode.com/problems/two-sum/
 */
 
-/* Short description of solution - test
+/* Short description of solution
 */
 
 class Solution {
