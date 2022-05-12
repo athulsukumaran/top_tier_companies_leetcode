@@ -4,9 +4,6 @@
  */
 
 /*
- * CountAndSay(n) = say the number of repetition for each digit in countAndSay(n - 1)
- * Base case CountAndSay(1) = "1"
- *
  * Input: s = "cbaebabacd", p = "abc"
  * Output: [0,6]
  * Explanation:
