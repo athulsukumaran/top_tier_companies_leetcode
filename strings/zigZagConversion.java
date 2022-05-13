@@ -35,6 +35,7 @@
  *
  *
  * We can see that after num of Rows + (num of Rows - 2), i.e. 2*(numRows - 1), the row index pattern repeats.
+ * This is because, the row index sequence repeats like 0, 1, 2, 3, 2, 1 where all the indexes occurs twice except the first and last index.
  * The char index can be simplified to char index  % (2*(numRows - 1))
  * If char index simplified is less than num of rows then row index = char index
  * Else row index = 2*(numRows - 1) - char index simplified
@@ -46,10 +47,15 @@
 
 class Solution {
     private int getRowIndex(int numRows, int charIndex) {
+        
+        // If numRows = 1, no zig zag conversion required. Else use the formula to determine row index
         if(numRows == 1) {
             return 0;
         } else {
+            // simplifying char index step
             charIndex = charIndex % (2*(numRows - 1));
+            
+            // If charIndex < numRows then direction is forward and we return charIndex itself. Else the direction is backward and we return 2*(numRows - 1) - charIndex
             if(charIndex < numRows) {
                 return charIndex;
             } else {
@@ -59,11 +65,16 @@ class Solution {
     } 
     
     public String convert(String s, int numRows) {
+        // Use a list of stringbuilder to store characters based on row indexes
         List<StringBuilder> rowStrings = new ArrayList<>();
+        
+        // Iterating over the input string
         for(int i = 0; i < s.length(); i++) {
             char c = s.charAt(i);
             int rowIndex = getRowIndex(numRows, i);
-            if(rowIndex < rowStrings.size() && rowStrings.get(rowIndex) != null) {
+            
+            // If rowIndex < list size, then there is already an entry in list at that position so we update it. Else it is a new entry to list
+            if(rowIndex < rowStrings.size()) {
                 rowStrings.set(rowIndex, ((rowStrings.get(rowIndex)).append(c)));
             } else {
                 StringBuilder rowString = new StringBuilder();
@@ -71,10 +82,14 @@ class Solution {
                 rowStrings.add(rowIndex, rowString);
             }
         }
+        
         StringBuilder result = new StringBuilder();
+        
+        // Result string can be made by appending the strings in list one by one starting from position 0, 1, 2, 3.. in ascending order
         for(StringBuilder rowString : rowStrings) {
             result.append(rowString);
         }
+        
         return result.toString();
     }
 }
