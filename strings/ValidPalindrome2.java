@@ -65,6 +65,8 @@ class Solution {
             left++;
             right--;
         }
+        
+        // Return true, if loop is completed and string is checked. The string is already palindrome without needing to remove 1 character
         return true;
     }
 }
