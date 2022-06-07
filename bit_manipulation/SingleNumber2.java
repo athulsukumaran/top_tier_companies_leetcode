@@ -34,7 +34,7 @@
  * This is also using bit representations.
  * Idea is that the count of 1 bit at an index will be either 3x or 3x + 1 where (x = 0, 1,...).
  * This is because since all other numbers except the distinct number occurs thrice, the count of 1 bit at that index will be 3x if the distinct number doesnt have 1 at that index or 3x + 1 if the distinct number has 1 at that index 
- * We 
+ * We now convert the binary result array to the result value. Bit at index 0 is the most significant bit and at index 31 is the least significant
  */
 
 
