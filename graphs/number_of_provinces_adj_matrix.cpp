@@ -1,5 +1,5 @@
 /*
-    https://practice.geeksforgeeks.org/problems/number-of-provinces/
+    https://practice.geeksforgeeks.org/problems/number-of-provinces/1
 */
 
 /* Approach
