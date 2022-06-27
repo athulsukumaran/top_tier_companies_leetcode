@@ -18,6 +18,12 @@
     -   Space = O(V)
 */
 
+/*
+    Note: https://practice.geeksforgeeks.org/problems/prerequisite-tasks
+    This problem too can be solved by detecting cyle in the graph.
+    Its just that you need to create adjacency list yourself first
+*/
+
 class Solution {
   public:
     // Function to detect cycle in an undirected graph.
