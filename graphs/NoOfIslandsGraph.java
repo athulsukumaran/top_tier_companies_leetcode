@@ -44,7 +44,7 @@
  * Then we will call the dfs recurssively for the four directions(up, down, left and right)
  * 
  * After recursively iterating the vertices in dfs way, we go back to the main function and check for the next unvisited node and do dfs for the graph starting with that cell and increment the count
- * After the loops in main method we would have covered all the nodes in the graph and also have the count of disconnected graphs
+ * After the loops in main method we would have covered all the nodes in the graph and also have the count of islands
  *
  * Time Complexity: O(n) worst case as we will only check a grid position twice, Space Complexity: O((m * n) * memory for each recurssive call) 
  * Not sure if grid is full of 0, the time complexity would be O(m * n). Have to confirm this
@@ -61,7 +61,7 @@ class Solution {
         if(i < 0 || i >= m || j < 0 || j >= n || grid[i][j] != '1') {
             return;
         }
-        // Merk the cell as visited
+        // Mark the cell as visited
         grid[i][j] = '#';
       
         // Traversing in all 4 directions
