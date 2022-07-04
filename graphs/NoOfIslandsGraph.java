@@ -66,7 +66,7 @@ class Solution {
       
         // Traversing in all 4 directions
         dfs(grid, i - 1, j, m, n); // traversing in up direction in grid
-        dfs(grid, i + 1, j, m, n); // traversing in bottom direction in grid
+        dfs(grid, i + 1, j, m, n); // traversing in down direction in grid
         dfs(grid, i, j - 1, m, n); // traversing in left direction in grid
         dfs(grid, i, j + 1, m, n); // traversing in right direction in grid
     }
