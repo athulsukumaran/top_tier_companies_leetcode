@@ -48,19 +48,19 @@ class Solution {
     // Helper function to calculate the maximum amount we can rob in the houses that are arranged in linear order
   
     public int maxAmountRobLinear(int[] nums, int start, int end) {
-      
-        // The length of the houses in the array
+        
+        // The length of the houses in the array or sub array
         int length = end - start + 1;
-
+        
         // If length == 1, return the amount in house at start index
         // If length == 2, return max of amount in either of the houses 
-        // Else use the dpArray to find the max amount he can have at each index and return the max amount he will have at the end index (index length - 1)
-        
+        // Else helper method and dpArray to find the max amount he can have at each index and return the max amount he will have at the end index (index length - 1)
         if(length == 1) {
             return nums[start];
         } else if(length == 2) {
-            return Math.max(nums[start], nums[end]);
+            return Math.max(nums[start], nums[start + 1]);
         } else {
+      
             // Declare the dpArray
             // Declare the base cases
             int[] dpArray = new int[length];
@@ -78,8 +78,22 @@ class Solution {
     }
     
     public int rob(int[] nums) {
+        
+        // The length of the houses in the array
+        int length = nums.length;
+
+        // If length == 1, return the amount in house at start index
+        // If length == 2, return max of amount in either of the houses 
+        // Else helper method to return the max amount he will have at the end index (index length - 1)
+        
+        if(length == 1) {
+            return nums[0];
+        } else if(length == 2) {
+            return Math.max(nums[0], nums[1]);
+        } else {
       
-        // Call the helper function to get the maximum amount he can rob
-        return maxAmountRobLinear(nums, 0, nums.length - 1);
+            // Call the helper function to get the maximum amount he can rob
+            return maxAmountRobLinear(nums, 0, nums.length - 1);
+        }
     }
 }
