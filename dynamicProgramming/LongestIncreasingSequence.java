@@ -36,6 +36,9 @@
  *
  * Time Complexity: O(n ^ 2), Space Complexity: O(n).
  * Here we are storing the length of longest sequence ending with number at index I in the dp Array.
+ *
+ * Youtube link for geeks for geeks solution
+ * https://www.youtube.com/watch?v=Ns4LCeeOFS4
  */
 
 class Solution {
