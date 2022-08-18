@@ -31,7 +31,8 @@
  *
  * Finally iterate over the sorted list and see if removing the entry at begining will make the reduced array size less than or equal to half of original array size
  *
- * Time Complexity: O(n), Space Complexity: O(n) where n is length of array
+ * Time Complexity: O(nlogn), Space Complexity: O(n) where n is length of array
+ * O(n) time to calculate frequency and final result. O(nlogn) to sort the list of map entries
  */
 
 class Solution {
