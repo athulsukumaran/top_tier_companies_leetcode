@@ -45,8 +45,9 @@
  * 
  * Time Complexity: O(n), Space Complexity: O(n) where n is length of array
  * Though the time complexity and space complexity is in O(n), the space complexity can be further optimized using sliding window approach
- 
- class Solution {
+ *
+ */
+class Solution {
     public int maxSubArray(int[] nums) {
         // Length of input array
         int len = nums.length;
