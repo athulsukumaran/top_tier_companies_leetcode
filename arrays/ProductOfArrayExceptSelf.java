@@ -36,9 +36,9 @@
  * 
  * Time Complexity: O(n), Space Complexity: O(n) where n is length of array
  * Though the time complexity and space complexity is in O(n), the multiple loops(not nested, hence O(n) time) and multiple arrays to compute result could be further optimized.
+ */
  
- 
- class Solution {
+class Solution {
     public int[] productExceptSelf(int[] nums) { 
         // Length of input array
         int len = nums.length;
