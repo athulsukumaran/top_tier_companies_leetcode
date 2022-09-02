@@ -58,9 +58,7 @@
  *        Then target may be obtained by using this num and number of ways in which we can reach curr target if we include this num is dpArray[currTarget - num].
  *        Hence we can add this to dpArray[currTarget]
  *
- * At the end of iterating both the loops, we'll have the minimum number of coins required to make the amount, But if this is 10001(initial value in dpArray) => the coins cannot make the exact amount.
- *        => return -1 in that case
- *
+ * At the end of iterating both the loops, we'll have the ways to reach target at dpArray[target]
  *
  * Time Complexity: O(target * n), Space Complexity: O(target).
  *
