@@ -35,9 +35,6 @@
  * The base case is that for making amount zero, we need Zero coins.
  * 
  * We can define a dp array and initialize this as the base case. For all other index, lets first assume that the amount cannot be given with the coins and initialize them as the maximum number, i have used 10001 as the amount can be anthing in range 0 to 10000.
- * We will try to solve this using tabulation using a dp array and a max variable to store the max length among all increasing sequences.
- * Lets say the base cases, we know that the minimum length of a longest increasing sequence would be 1 as a sequence of only 1 number will satisfy this condition. 
- * So we can declare a dp array to store the length of a longest increasing sequence ending at index i and initialize it with 1 assuming, no other elements before it is lesser than it.
  * 
  * Now we can check for index 1 to amount in dp array, if the value at index i can be given using coin denominations we have
  * For this we loop throught the coins array in an inner loop
