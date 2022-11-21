@@ -41,6 +41,8 @@
  *
  * Check the youtube link below for solution
  * https://www.youtube.com/watch?v=7pnhv842keE
+ *
+ */
  
  class Solution {
     public int majorityElement(int[] nums) {
