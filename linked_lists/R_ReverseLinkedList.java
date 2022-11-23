@@ -34,7 +34,7 @@
  *
  * Time Complexity: O(n), Space Complexity: O(1).
  * As we have to iterate through all nodes once, time complexity is O(n).
- * As we use 2 ListNode variables, the space complexity is O(n)
+ * As we use 2 ListNode variables, the space complexity is O(1)
  *
  */
 
