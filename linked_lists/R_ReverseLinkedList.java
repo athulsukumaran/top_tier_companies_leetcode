@@ -1,5 +1,9 @@
 /*
  * Question
+ * https://leetcode.com/problems/reverse-linked-list/description/
+ */
+ 
+/*
  * Given the head of a singly linked list, reverse the list, and return the reversed list.
  *
  * Example 1:
@@ -64,3 +68,25 @@ class Solution {
         return head;
     }
 }
+
+/*
+ *
+ * The below solution also works, this doesnt create new nodes with curr nodes val, instead uses a temp variable to point to the next of curr node.
+ *
+class Solution {
+    public ListNode reverseList(ListNode head) {
+        ListNode nextOfHead = null, prev = null;
+        
+        while(head != null) {
+            nextOfHead = head.next;
+            head.next = prev;
+            prev = head;
+            head = nextOfHead;
+        }
+
+        return prev;
+    }
+}
+
+ *
+ */
