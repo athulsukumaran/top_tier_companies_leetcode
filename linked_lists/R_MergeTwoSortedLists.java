@@ -63,12 +63,20 @@
 class Solution {
     public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
         
+        // ListNode objects to store result, curr and prev nodes
         ListNode result = null;
         ListNode curr = null;
         ListNode prev = null;
 
+        // Iterating till both the lists are not null
         while(list1 != null || list2 != null) {
+        
             if(list1 != null && list2 != null) {
+            
+                // If both lists are not null
+                // Compare the values and assign curr with node having lesser val
+                // Update the corresponding list to its next position
+                
                 if(list1.val < list2.val) {
                     curr = list1;
                     list1 = list1.next;
@@ -77,22 +85,37 @@ class Solution {
                     list2 = list2.next;
                 }
             } else if(list1 != null) {
+            
+                // Else if list 1 is not null and list 2 is null, then set curr node with list 1 node
+                // Update the list 1 to its next position
                 curr = list1;
                 list1 = list1.next;
+                
             } else {
+            
+                // Else if list 2 is not null and list 1 is null, then set curr node with list 2 node
+                // Update the list 2 to its next position
+                
                 curr = list2;
                 list2 = list2.next;
             }
+            
+            // If prev node is not null, prev node would be pointing to the curr node of previous iteration
+            // Set the next pointer of prev node to the curr node
             if(prev != null) {
                 prev.next = curr;
             }
+            
+            // Update the prev node with value of curr node for next iteration
             prev = curr;
 
+            // If result is not set(i.e, first node in result list), assign it with value of curr node
             if(result == null) {
                 result = curr;
             }
         }
 
+        // Return result list
         return result;
     }
 }
